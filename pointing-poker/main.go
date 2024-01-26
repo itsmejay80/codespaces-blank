@@ -7,9 +7,7 @@ import (
 
 	"pointing-poker/initializers"
 
-	models "pointing-poker/models"
-
-	"time"
+	"pointing-poker/controllers"
 )
 
 func init() {
@@ -23,18 +21,9 @@ func main() {
 		c.String(http.StatusOK, "Pointing Poker Server Running!!")
 	})
 
-	router.POST("/create-session", func(c *gin.Context) {
-		session := models.Session{CreatedAt: time.Now()}
+	router.POST("/create-session", controllers.CreateSession)
 
-		result := initializers.DB.Create(&session)
-
-		if result.Error != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Unable to create session"})
-			return
-		}
-
-		c.JSON(http.StatusOK, gin.H{"session": session.ID})
-	})
+	router.GET("/join-session/:id", controllers.JoinSession)
 
 	router.Run(":8000")
 }
