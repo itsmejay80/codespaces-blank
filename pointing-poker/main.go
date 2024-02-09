@@ -23,7 +23,9 @@ func main() {
 
 	router.POST("/create-session", controllers.CreateSession)
 
-	router.GET("/join-session/:id", controllers.JoinSession)
+	router.POST("/join-session/:id", controllers.JoinSession)
+
+	router.POST("/leave-session/:id", controllers.LeaveSession)
 
 	router.Run(":8000")
 }

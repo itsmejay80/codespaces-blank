@@ -12,13 +12,14 @@
 - [x] **Setup Basic Server**
   - [x] Install necessary Go packages and dependencies.
   - [x] Set up a basic HTTP server.
-- [ x **Database Integration**
+- [x] **Database Integration**
   - [x] Choose a database (e.g., PostgreSQL, MySQL).
   - [x] Design and set up the database schema.
   - [x] Implement database connection and queries.
-- [ ] **Session Management**
-  - [ ] Develop functionality for creating sessions.
-  - [ ] Implement logic for generating and handling unique session links.
+- [x] **Session Management**
+  - [x] Develop functionality for creating sessions.
+  - [x] Join session and leave session functionality.
+  - [x] Implement logic for generating and handling unique session links.
 - [ ] **Real-time Interaction**
   - [ ] Integrate WebSockets for real-time communication.
   - [ ] Set up event handlers for different real-time actions (e.g., voting, joining sessions).
